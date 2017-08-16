@@ -1,0 +1,4 @@
+*.box
+*.sh
+*.vagrant
+Vagrantfile
