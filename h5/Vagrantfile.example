@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :h5 do |config|
       config.vm.box = "centos69-0.1.0"
       config.vm.hostname = "h5-1"
-      config.vm.network :private_network, ip: "11.11.11.12"
+      config.vm.network :private_network, ip: "10.10.10.12"
       config.vm.synced_folder "./share", "/data"
       config.vm.provision :shell, path: "./bootstrap.sh"
       config.vm.provider "virtualbox" do |v|

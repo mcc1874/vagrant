@@ -1,8 +1,9 @@
-##centos69-lnmp14-0.1.0.box
+﻿##centos69-lnmp14-0.1.0.box
 
 
-#关闭iptables
+#关闭iptables && selinux
 - service iptables stop && chkconfig iptables off
+- setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
 
 
 #安装基本工具

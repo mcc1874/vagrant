@@ -1,4 +1,7 @@
+﻿#关闭iptables && selinux
 - service iptables stop && chkconfig iptables off
+- setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
+
 - yum -y install wget curl
 
 #安装node
