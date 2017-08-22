@@ -1,15 +1,20 @@
 ﻿# hosts
-cat > /etc/hosts <<EOF
+cat > /etc/hosts <<'EOF'
 127.0.0.1 localhost
 EOF
 
 
+# 环境变量
+cat > ~/.profile <<'EOF'
+export PATH=$PATH
+EOF
+
+
 # 计划任务
-cat > /var/spool/cron/root <<EOF
+cat > /var/spool/cron/root <<'EOF'
 #*/15 * * * * echo "aa" >/dev/null 2>&1
 EOF
 
 
 # 保证服务可用
 lnmp restart
-
