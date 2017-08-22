@@ -9,7 +9,7 @@ cat > /var/spool/cron/root <<'EOF'
 EOF
 
 # 环境变量
-cat > ~/.bash_profile <<'EOF'
+cat > ~/.bashrc <<'EOF'
 export PATH=$PATH
 EOF
 
