@@ -21,8 +21,8 @@
 
 #安装ImageMagick  7.0有BUG roundCorners
 - cd /data/src
-- wget https://www.imagemagick.org/download/ImageMagick-6.9.9-5.tar.gz
-- tar -zxvf ImageMagick-6.9.9-5.tar.gz && cd ImageMagick-6.9.9-5
+- wget https://www.imagemagick.org/download/ImageMagick-6.9.9-11.tar.gz
+- tar -zxvf ImageMagick-6.9.9-11.tar.gz && cd ImageMagick-6.9.9-11
 - ./configure --prefix=/usr/local/imagemagick && make && make install
 
 
@@ -73,6 +73,7 @@
 
 - cd /data/src && wget -c http://pecl.php.net/get/zookeeper-0.3.2.tgz && tar -zxvf zookeeper-0.3.2.tgz && cd zookeeper-0.3.2
 - phpize && ./configure --with-php-config=/usr/local/php/bin/php-config --with-libzookeeper-dir=/usr/local/zookeeper && make && make install
+- echo 'extension=zookeeper.so' >> /usr/local/php/etc/php.ini
 
 #安装php扩展 - imagick
 - wget http://pecl.php.net/get/imagick-3.4.3.tgz
@@ -80,8 +81,27 @@
 - phpize && ./configure --with-php-config=/usr/local/php/bin/php-config --with-imagick=/usr/local/imagemagick && make && make install
 - echo 'extension=imagick.so' >> /usr/local/php/etc/php.ini
 
-#配置composer
+#安装配置composer
+- curl -sS https://getcomposer.org/installer | php
+- mv composer.phar /usr/local/bin/composer
 - composer config -g repos.packagist composer https://packagist.jp
 
 #其他
 - php扩展目录：/usr/local/php/lib/php/extensions/no-debug-non-zts-20160303/
+
+
+## 单独安装memcached 扩展
+# 安装libmemcached
+- cd /data/src
+- wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
+- tar zxvf libmemcached-1.0.18.tar.gz && cd libmemcached-1.0.18
+- ./configure --prefix=/usr/local/libmemcached
+- make && make install
+
+# 安装memcached.so
+- cd /data/src
+- wget https://pecl.php.net/get/memcached-3.0.3.tgz
+- tar zxvf memcached-3.0.3.tgz && cd memcached-3.0.3
+- phpize && ./configure --with-php-config=/usr/local/php/bin/php-config --with-libmemcached-dir=/usr/local/libmemcached
+- make && make install
+- echo 'extension=memcached.so' >> /usr/local/php/etc/php.ini
