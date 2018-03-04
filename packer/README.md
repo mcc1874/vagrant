@@ -15,7 +15,7 @@
 
 
 ## 注意：如果本地已下载，可更改ubuntu/ubuntu1604.json文件
-# D:/vagrant/packer/packer build -only=virtualbox-iso -var-file=ubuntu1604.json ubuntu.json
+# D:/vagrant/packer/packer build -only=virtualbox-iso -var-file=ubuntu1604-local.json ubuntu.json
 {
   "_comment": "Build with `packer build -var-file=ubuntu1604-local.json ubuntu.json`",
   "vm_name": "ubuntu1604",
