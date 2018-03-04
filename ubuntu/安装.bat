@@ -1,6 +1,6 @@
 @echo off
-set "default_box_name=centos69-lnmp14-0.1.0"
-set /p "box_name=please input box name(default:centos69-lnmp14-0.1.0): "
+set "default_box_name=ubuntu1604"
+set /p "box_name=please input box name(default:ubuntu1604): "
 
 if not defined box_name (
     set "box_name=%default_box_name%"
