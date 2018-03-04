@@ -1,8 +1,10 @@
-#https://github.com/mcc1874/vagrant
+﻿#https://github.com/mcc1874/vagrant
 
 ## 前置条件
 - [安装VirtualBox] https://www.virtualbox.org
+- http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-Win.exe
 - [安装Vagrant] https://www.vagrantup.com
+- https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.msi
 - [安装Vagrant plugin] cmd：vagrant plugin install vagrant-vbguest
 
 ## 下载对应的box放到对应目录：
