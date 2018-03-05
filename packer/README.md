@@ -1,4 +1,6 @@
-﻿## 全自动制作基础BOX
+﻿########################
+## 全自动制作基础BOX  ##
+########################
 # 1.安装virtualbox - https://www.virtualbox.org
 # 2.安装vagrant - https://www.vagrantup.com
 # 3.下载packer到当前目录 - https://www.packer.io/downloads.html
@@ -28,7 +30,13 @@
   "memory": "512",
   "preseed" : "preseed.cfg"
 }
-
-
 ## 查看SHA1
 # certutil -hashfile ubuntu-16.04.4-server-amd64.iso SHA1
+
+
+########################
+## 从虚拟机中导出盒子 ##
+########################
+- 在虚拟机上执行对应的cleanup.sh脚本，如：./ubuntu/script/cleanup.sh
+- 然后在主机上执行{从虚拟机中导出盒子.bat}
+
