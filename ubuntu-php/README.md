@@ -18,6 +18,10 @@
 - /etc/nginx/nginx.conf
 - /etc/php/7.0/fpm/php.ini
 - /usr/lib/php/20151012
+- /data/www
+- /data/vhost
+- /data/logs
+- /data/src
 
 
 ## nginx 相关配置 ##
