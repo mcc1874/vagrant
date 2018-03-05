@@ -1,12 +1,13 @@
 ﻿########################
 ## 全自动制作基础BOX  ##
 ########################
-# 1.安装virtualbox - https://www.virtualbox.org
-# 2.安装vagrant - https://www.vagrantup.com
-# 3.下载packer到当前目录 - https://www.packer.io/downloads.html
-# 4.下载对应的系统到当前目录 - https://github.com/boxcutter
-#（假设当前目录为 D:/vagrant/packer）
-# 5.ubuntu https://www.ubuntu.com/download/server
+# 1.安装VirtualBox https://www.virtualbox.org
+- win7 http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-Win.exe
+- win10 https://download.virtualbox.org/virtualbox/5.2.4/VirtualBox-5.2.4-119785-Win.
+# 2.下载packer到当前目录 - https://www.packer.io/downloads.html
+# 3.下载对应的系统到当前目录 - https://github.com/boxcutter
+-（假设当前目录为 D:/vagrant/packer）
+# 4.下载ubuntu-server https://www.ubuntu.com/download/server
 
 #######################################
 # 以ubuntu举例
@@ -26,7 +27,7 @@
   "iso_checksum": "ee834fbeb94cc55972b38caafa2029c29625e2e8",
   "iso_checksum_type": "sha1",
   "iso_name": "ubuntu-16.04.4-server-amd64",
-  "iso_url": "file:///E:/Download/ubuntu-16.04.4-server-amd64.iso",
+  "iso_url": "file:///D:/download/ubuntu-16.04.4-server-amd64.iso",
   "memory": "512",
   "preseed" : "preseed.cfg"
 }
