@@ -12,3 +12,8 @@ EOF
 cat > ~/.bashrc <<'EOF'
 export PATH=$PATH
 EOF
+
+# 启动服务
+sudo /etc/init.d/nginx start
+sudo /etc/init.d/php7.0-fpm start
+sudo /etc/init.d/redis-server start

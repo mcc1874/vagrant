@@ -9,9 +9,9 @@
 
 
 ## 常用命令
-- service nginx reload
-- service php7.0-fpm reload
-- service redis-server restart
+- sudo /etc/init.d/nginx start
+- sudo /etc/init.d/php7.0-fpm start
+- sudo /etc/init.d/redis-server start
 
 
 ## 常用文件/目录
