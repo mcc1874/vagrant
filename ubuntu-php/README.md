@@ -22,11 +22,11 @@
 
 ## nginx 相关配置 ##
 # vi /etc/nginx/nginx.conf
+# 关闭sendfile
+- sendfile off;
 # 更改日志路径
 - access_log /data/logs/access.log;
 - error_log /data/logs/error.log;
-# 关闭sendfile
-- sendfile off;
 # 添加新的nginx vhost目录
 - 在include /etc/nginx/conf.d/*.conf; 后面增加一条
 - include /data/vhost/*.conf;
