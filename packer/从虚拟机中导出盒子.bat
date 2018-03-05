@@ -1,6 +1,6 @@
 @echo off
-set "default_vm_name=lnmp-1"
-set /p "vm_name=please input vm name(default:lnmp-1): "
+set "default_vm_name=ubuntu1604"
+set /p "vm_name=please input vm name(default:ubuntu1604): "
 
 if not defined vm_name (
     set "vm_name=%default_vm_name%"
