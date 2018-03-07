@@ -4,8 +4,7 @@
 - sudo apt install nginx
 - sudo apt install php php-dev
 - sudo apt install redis-server
-- sudo apt install git
-- sudo apt install composer
+- sudo apt install git composer zip
 
 
 ## 常用命令
@@ -38,11 +37,11 @@
 
 ## php 相关配置 ##
 # 显示错误
-- sed -i 's/^display_errors =.*/display_errors = On/g' /etc/php/7.0/fpm/php.ini
+- sudo sed -i 's/^display_errors =.*/display_errors = On/g' /etc/php/7.0/fpm/php.ini
 # 错误级别
-- sed -i 's/^error_reporting =.*$/error_reporting = E_ALL \& ~E_NOTICE/g' /etc/php/7.0/fpm/php.ini
+- sudo sed -i 's/^error_reporting =.*$/error_reporting = E_ALL \& ~E_NOTICE/g' /etc/php/7.0/fpm/php.ini
 # 打开禁用函数
-- sed -i 's/^disable_functions =.*$/disable_functions = /g' /etc/php/7.0/fpm/php.ini
+- sudo sed -i 's/^disable_functions =.*$/disable_functions = /g' /etc/php/7.0/fpm/php.ini
 
 
 ## php模块安装
@@ -51,24 +50,24 @@
 # 搜索PHP已安装模块
 - php -m
 # 安装模块
-- apt -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext php-bcmath php-xdebug
+- sudo apt -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext php-bcmath php-xdebug
 
 
 ## phpredis扩展安装配置
-- git clone https://github.com/phpredis/phpredis.git
-- mv phpredis/ /etc/ && cd /etc/phpredis
-- phpize && ./configure
-- make && make install
-- echo 'extension=redis.so' >> /etc/php/7.0/fpm/php.ini
+- sudo git clone https://github.com/phpredis/phpredis.git
+- sudo mv phpredis/ /etc/ && cd /etc/phpredis
+- sudo phpize && ./configure
+- sudo make && make install
+- sudo echo 'extension=redis.so' >> /etc/php/7.0/fpm/php.ini
 
 
 ## xdebug扩展配置
-- echo 'zend_extension=xdebug.so' >> /etc/php/7.0/fpm/php.ini
-- echo 'xdebug.remote_enable=1' >> /etc/php/7.0/fpm/php.ini
-- echo 'xdebug.remote_port=9000' >> /etc/php/7.0/fpm/php.ini
-- echo 'xdebug.remote_connect_back=1' >> /etc/php/7.0/fpm/php.ini
+- sudo echo 'zend_extension=xdebug.so' >> /etc/php/7.0/fpm/php.ini
+- sudo echo 'xdebug.remote_enable=1' >> /etc/php/7.0/fpm/php.ini
+- sudo echo 'xdebug.remote_port=9000' >> /etc/php/7.0/fpm/php.ini
+- sudo echo 'xdebug.remote_connect_back=1' >> /etc/php/7.0/fpm/php.ini
 
 
 ##重启服务
-- service php7.0-fpm reload
-- service nginx reload
+- sudo service php7.0-fpm reload
+- sudo service nginx reload
