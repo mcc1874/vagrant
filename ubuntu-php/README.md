@@ -16,6 +16,7 @@
 ## 常用文件/目录
 - /etc/nginx/nginx.conf
 - /etc/php/7.0/fpm/php.ini
+- /etc/php/7.0/cli/php.ini
 - /usr/lib/php/20151012
 - /data/www
 - /data/vhost
@@ -59,6 +60,7 @@
 - sudo phpize && ./configure
 - sudo make && make install
 - sudo echo 'extension=redis.so' >> /etc/php/7.0/fpm/php.ini
+- sudo echo 'extension=redis.so' >> /etc/php/7.0/cli/php.ini
 
 
 ## xdebug扩展配置
