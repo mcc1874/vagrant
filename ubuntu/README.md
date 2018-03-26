@@ -18,6 +18,10 @@ vi /etc/ssh/sshd_config {
 }
 /etc/init.d/ssh restart
 
+sudo vi /etc/resolv.conf {
+	nameserver 10.0.2.3
+}
+
 
 配置私有网络
 vi /etc/network/interfaces {
