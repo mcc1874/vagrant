@@ -5,8 +5,8 @@
 - https://download.virtualbox.org/virtualbox/5.1.26/VirtualBox-5.1.26-117224-Win.exe
 - [安装Vagrant] https://www.vagrantup.com
 - https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.msi
-- [安装Vagrant plugin]
-- vagrant plugin install vagrant-vbguest
+- [CPU开启虚拟化技术]
+- 请进入BIOSS设置
 
 ## 下载对应的box放到对应目录：
 - vagrant/ubuntu/ubuntu-0.1.0.box
