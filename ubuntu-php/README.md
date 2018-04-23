@@ -51,7 +51,7 @@
 # 搜索PHP已安装模块
 - php -m
 # 安装模块
-- sudo apt -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext php-bcmath php-xdebug
+- sudo apt -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext php-bcmath php-xdebug php7.0-zip
 
 
 ## phpredis扩展安装配置
@@ -73,3 +73,12 @@
 ##重启服务
 - sudo service php7.0-fpm reload
 - sudo service nginx reload
+
+
+##php72
+- sudo apt-get install software-properties-common
+- sudo apt-get install python-software-properties
+- sudo add-apt-repository ppa:ondrej/php
+- sudo apt-get update
+- sudo apt-get install -y php7.2 php7.2-dev
+
