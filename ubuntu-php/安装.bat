@@ -7,6 +7,7 @@ if not defined box_name (
 )
 set box_file=%cd%\\%box_name%.box
 if exist %box_file% (
+	vagrant plugin install vagrant-winnfsd
     vagrant box add --name %box_name% %box_file%
     echo success
 ) else (
