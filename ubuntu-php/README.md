@@ -25,7 +25,7 @@
 
 
 ## nginx 相关配置 ##
-# vi /etc/nginx/nginx.conf
+# sudo vi /etc/nginx/nginx.conf
 # 关闭sendfile
 - sendfile off;
 # 更改日志路径
@@ -57,7 +57,7 @@
 ## phpredis扩展安装配置
 - sudo git clone https://github.com/phpredis/phpredis.git
 - sudo mv phpredis/ /etc/ && cd /etc/phpredis
-- sudo phpize && ./configure
+- sudo phpize && sudo ./configure
 - sudo make && make install
 - sudo echo 'extension=redis.so' >> /etc/php/7.0/fpm/php.ini
 - sudo echo 'extension=redis.so' >> /etc/php/7.0/cli/php.ini
@@ -73,12 +73,3 @@
 ##重启服务
 - sudo service php7.0-fpm reload
 - sudo service nginx reload
-
-
-##php72
-- sudo apt-get install software-properties-common
-- sudo apt-get install python-software-properties
-- sudo add-apt-repository ppa:ondrej/php
-- sudo apt-get update
-- sudo apt-get install -y php7.2 php7.2-dev
-
