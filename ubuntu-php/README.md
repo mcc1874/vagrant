@@ -93,4 +93,8 @@ pm = static
 pm.max_children = 5  #生产服100
 
 
-
+# 修改北京时间
+date -R
+tzselect
+sudo cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+date -R
