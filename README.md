@@ -26,6 +26,10 @@ https://pan.baidu.com/s/1PK2RTgWWvAtkmxDqklRjwA
 ## 全自动制作box，请看packer
 
 
+## vagrant 安装查件慢
+类似 vagrant plugin install 查件名 --plugin-clean-sources --plugin-source https://gems.ruby-china.com
+
+
 ## 如何共享本地环境
 ···
 # Vagrant Share允许您与世界上的任何人共享您的Vagrant环境，只

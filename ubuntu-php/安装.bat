@@ -1,13 +1,13 @@
 @echo off
-set "default_box_name=ubuntu1604php-0.1.0"
-set /p "box_name=please input box name(default:ubuntu1604php-0.1.0): "
+set "default_box_name=ubuntu1804php-0.1.0"
+set /p "box_name=please input box name(default:ubuntu1804php-0.1.0): "
 
 if not defined box_name (
     set "box_name=%default_box_name%"
 )
 set box_file=%cd%\\%box_name%.box
 if exist %box_file% (
-	vagrant plugin install vagrant-winnfsd
+	vagrant plugin install vagrant-winnfsd --plugin-clean-sources --plugin-source https://gems.ruby-china.com
     vagrant box add --name %box_name% %box_file%
     echo success
 ) else (

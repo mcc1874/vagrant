@@ -4,35 +4,35 @@
 # 1.安装VirtualBox https://www.virtualbox.org
 - win7 http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-Win.exe
 - win10 https://download.virtualbox.org/virtualbox/5.2.4/VirtualBox-5.2.4-119785-Win.
-# 2.下载packer到当前目录 - https://www.packer.io/downloads.html
+# 2.下载packer到当前目录 - https://www.packer.io/downloads.html  packer.exe
 # 3.下载对应的系统到当前目录 - https://github.com/boxcutter
 -（假设当前目录为 D:/vagrant/packer）
 # 4.下载ubuntu-server https://www.ubuntu.com/download/server
+http://mirrors.aliyun.com/ubuntu-releases/18.04/
+http://cdimage.ubuntu.com/ubuntu/releases/18.04.4/release/
 
 #######################################
 # 以ubuntu举例
 # 把代码拉下来https://github.com/boxcutter/ubuntu
 #######################################
 # cd D:/vagrant/packer/ubuntu
-# D:/vagrant/packer/packer build -only=virtualbox-iso -var-file=ubuntu1604.json ubuntu.json
+# D:/vagrant/packer/packer build -only=virtualbox-iso -var-file=ubuntu1804-local.json ubuntu.json
 
 
-## 注意：如果本地已下载，可更改ubuntu/ubuntu1604.json文件
-# D:/vagrant/packer/packer build -only=virtualbox-iso -var-file=ubuntu1604-local.json ubuntu.json
+## 注意：如果本地已下载，可更改ubuntu/ubuntu1804.json文件
 {
-  "_comment": "Build with `packer build -var-file=ubuntu1604-local.json ubuntu.json`",
-  "vm_name": "ubuntu1604",
+  "_comment": "Build with `packer build -var-file=ubuntu1804-local.json ubuntu.json`",
+  "vm_name": "ubuntu1804",
   "cpus": "1",
   "disk_size": "65536",
-  "iso_checksum": "ee834fbeb94cc55972b38caafa2029c29625e2e8",
-  "iso_checksum_type": "sha1",
-  "iso_name": "ubuntu-16.04.4-server-amd64",
-  "iso_url": "file:///D:/download/ubuntu-16.04.4-server-amd64.iso",
+  "iso_checksum": "sha256:8c5fc24894394035402f66f3824beb7234b757dd2b5531379cb310cedfdf0996",  
+  "iso_name": "ubuntu-18.04.5-server-amd64.iso",
+  "iso_url": "file:///D:/vagrant/packer/ubuntu-18.04.5-server-amd64.iso",
   "memory": "512",
   "preseed" : "preseed.cfg"
 }
-## 查看SHA1
-# certutil -hashfile ubuntu-16.04.4-server-amd64.iso SHA1
+## 查看SHA256
+# certutil -hashfile ubuntu-18.04.5-server-amd64.iso SHA256
 
 
 ########################
