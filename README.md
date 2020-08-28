@@ -5,7 +5,7 @@
 - https://download.virtualbox.org/virtualbox/5.1.26/VirtualBox-5.1.26-117224-Win.exe
 - [安装Vagrant] https://www.vagrantup.com
 - win7 https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.msi
-- win10 https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.msi
+- win10 https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.msi
 - [CPU开启虚拟化技术]
 - 请进入BIOSS设置
 
