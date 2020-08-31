@@ -72,7 +72,7 @@ apt-cache search php7.2
 # 搜索PHP已安装模块
 php -m
 # 安装模块
-sudo apt -y install php7.2-mysql php7.2-curl php7.2-gd php7.2-intl php-pear php-imagick php7.2-imap php-memcache php7.2-pspell php7.2-recode php7.2-sqlite3 php7.2-tidy php7.2-xmlrpc php7.2-xsl php7.2-mbstring php-gettext php-bcmath php-xdebug php7.2-zip php-redis
+sudo apt -y install php7.2-mysql php7.2-curl php7.2-gd php7.2-intl php-pear php-imagick php7.2-imap php-memcache php7.2-pspell php7.2-recode php7.2-sqlite3 php7.2-tidy php7.2-xmlrpc php7.2-xsl php7.2-mbstring php-gettext php-bcmath php-xdebug php7.2-zip php-igbinary php-redis
 
 
 文件打开数：
