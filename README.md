@@ -42,3 +42,7 @@ ngrok http -region ap -host-header=rewrite 本机虚拟域名:80
 
 hosts 10.10.10.11 本机虚拟域名
 ···
+
+
+## 公共box仓库
+# https://app.vagrantup.com/boxes/search
