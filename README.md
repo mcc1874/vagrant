@@ -12,6 +12,7 @@
 ## 下载对应的box放到对应目录：
 - vagrant/ubuntu/ubuntu-0.1.0.box
 https://pan.baidu.com/s/1PK2RTgWWvAtkmxDqklRjwA
+https://app.vagrantup.com/mcc1874/boxes/ubuntu1804php-0.1.0
 
 ## 将后缀为example的copy一份并去掉后缀，
 - bootstrap.sh.example => bootstrap.sh
