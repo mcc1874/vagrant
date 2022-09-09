@@ -12,3 +12,9 @@ EOF
 cat > ~/.bashrc <<'EOF'
 export PATH=$PATH
 EOF
+
+
+sudo timedatectl set-timezone Asia/Shanghai
+# 换源
+sudo sed -i 's/archive.ubuntu.com/mirrors.cloud.tencent.com/g' /etc/apt/sources.list
+sudo sed -i 's/security.ubuntu.com/mirrors.cloud.tencent.com/g' /etc/apt/sources.list

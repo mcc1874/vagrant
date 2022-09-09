@@ -13,6 +13,13 @@ cat > ~/.bashrc <<'EOF'
 export PATH=$PATH
 EOF
 
+
+sudo timedatectl set-timezone Asia/Shanghai
+# 换源
+sudo sed -i 's/archive.ubuntu.com/mirrors.cloud.tencent.com/g' /etc/apt/sources.list
+sudo sed -i 's/security.ubuntu.com/mirrors.cloud.tencent.com/g' /etc/apt/sources.list
+
+
 # 启动服务
 sudo /etc/init.d/nginx start
 sudo /etc/init.d/php7.2-fpm start

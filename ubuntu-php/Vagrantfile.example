@@ -1,7 +1,7 @@
 hostname = "ubuntu1804php"
 
 Vagrant.configure("2") do |config|
-  config.vm.define :hostname do |config|
+  config.vm.define hostname do |config|
       config.ssh.password = "vagrant"     #如果是官方下载的box请注释掉这行
       config.ssh.insert_key = false       #如果是官方下载的box请注释掉这行
       config.vm.box = "ubuntu1804php-0.1.0"
