@@ -16,9 +16,20 @@ EOF
 
 sudo timedatectl set-timezone Asia/Shanghai
 # 换源
-sudo sed -i 's/archive.ubuntu.com/mirrors.cloud.tencent.com/g' /etc/apt/sources.list
-sudo sed -i 's/security.ubuntu.com/mirrors.cloud.tencent.com/g' /etc/apt/sources.list
-
+cat > /etc/apt/sources.list <<'EOF'
+deb http://mirrors.tencent.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.tencent.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.tencent.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.tencent.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.tencent.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.tencent.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.tencent.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.tencent.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.tencent.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.tencent.com/ubuntu/ bionic-backports main restricted universe multiverse
+EOF
+sudo apt -y update
+sudo apt -y upgrade
 
 # 启动服务
 sudo /etc/init.d/nginx start
