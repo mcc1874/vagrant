@@ -39,7 +39,7 @@ https://app.vagrantup.com/mcc1874/boxes/ubuntu1804php-0.1.0
 # https://ngrok.com/download
 
 方法2
-ngrok http -region ap -host-header=rewrite 本机虚拟域名:80
+ngrok http --region ap --host-header=rewrite 本机虚拟域名:80
 
 hosts 10.10.10.11 本机虚拟域名
 ···
